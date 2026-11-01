@@ -10,7 +10,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   <header className="text-white bg-gray-50/80 fixed top-0 w-full z-10 shadow-md">
     <div className="container mx-auto px-4 py-4 flex justify-center">
       <div className="h-12 flex items-center gap-3">
-        <span className="text-2xl font-bold text-[#004a8e]">Banestes</span>
+        <img
+          src={`${import.meta.env.BASE_URL}logo-banestes.svg`}
+          alt="Logo Banestes" draggable="false"
+          className="h-12"
+        />
         <span className="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full">
           Protótipo · dados fictícios
         </span>
