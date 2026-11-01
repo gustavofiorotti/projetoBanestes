@@ -9,11 +9,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 <div className="min-h-screen flex flex-col bg-gray-50"> 
   <header className="text-white bg-gray-50/80 fixed top-0 w-full z-10 shadow-md">
     <div className="container mx-auto px-4 py-4 flex justify-center">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Logo_do_Banestes.svg/2560px-Logo_do_Banestes.svg.png"
-        alt="Logo Banestes" draggable="false"
-        className="h-12"
-      />
+      <div className="h-12 flex items-center gap-3">
+        <span className="text-2xl font-bold text-[#004a8e]">Banestes</span>
+        <span className="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full">
+          Protótipo · dados fictícios
+        </span>
+      </div>
     </div>
   </header>
       
@@ -23,7 +24,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       
       <footer className="bg-gray-100 border-t border-gray-200 py-4 mt-auto">
         <div className="container mx-auto px-4 text-center text-gray-600 text-sm">
-          &copy; {new Date().getFullYear()} Banestes — Todos os direitos reservados. Feito por <a href="https://github.com/gustavofiorotti" target='_blank' rel='noopener noreferrer' className="text-[#004a8e] no-underline hover:text-[#0079fe] underline transition-colors duration-200 ease-in-out">Gustavo Fiorotti</a>.
+          Protótipo feito para um processo seletivo do Banestes, sem vínculo com sistemas do banco. Todos os dados são fictícios. Feito por <a href="https://github.com/gustavofiorotti" target='_blank' rel='noopener noreferrer' className="text-[#004a8e] no-underline hover:text-[#0079fe] underline transition-colors duration-200 ease-in-out">Gustavo Fiorotti</a>.
         </div>
       </footer>
     </div>
