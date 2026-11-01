@@ -19,6 +19,7 @@ Protótipo front-end feito para um processo seletivo do Banestes. Não é um pro
 - Tailwind CSS 3
 - Lucide React (ícones)
 - ESLint
+- Vitest e Testing Library
 
 ## Como rodar
 
@@ -39,6 +40,7 @@ O Vite mostra o endereço no terminal: por padrão, `http://localhost:5173/proje
 - `npm run build`: build de produção
 - `npm run preview`: serve a build localmente
 - `npm run lint`: verificação com ESLint
+- `npm test`: testes unitários com Vitest
 - `npm run deploy`: publica a pasta `dist` no GitHub Pages
 
 ## Estrutura
