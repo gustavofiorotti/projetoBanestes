@@ -20,22 +20,24 @@ const ClienteList: React.FC<ClienteListProps> = ({
   const itemsPerPage = 10;
 
   useEffect(() => {
+    setCurrentPage(1);
+
     if (!searchTerm.trim()) {
       setFilteredClientes(clientes);
       return;
     }
-  
+
     const searchTermLower = searchTerm.toLowerCase();
-  
+
     const formatNum = (valor: string) => valor.replace(/\D/g, "");
-  
+    const searchDigits = formatNum(searchTerm);
+
     const filtered = clientes.filter((cliente) =>
       cliente.nome.toLowerCase().includes(searchTermLower) ||
-      formatNum(cliente.cpfCnpj).includes(formatNum(searchTerm))
+      (searchDigits !== "" && formatNum(cliente.cpfCnpj).includes(searchDigits))
     );
-  
+
     setFilteredClientes(filtered);
-    setCurrentPage(1);
   }, [searchTerm, clientes]);
   
 

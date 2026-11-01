@@ -91,22 +91,26 @@ const ClienteDetails: React.FC<ClienteDetailsProps> = ({
           <div className="flex items-start">
             <Calendar className="h-5 w-5 text-gray-500 mr-2" />
             <div>
-              <p className="text-xs text-gray-500">Data de Nascimento</p>
+              <p className="text-xs text-gray-500">
+                {cliente.cpfCnpj.length === 14 ? "Data de Fundação" : "Data de Nascimento"}
+              </p>
               <p className="text-gray-800">
                 {formatDate(cliente.dataNascimento)}
               </p>
             </div>
           </div>
 
-          <div className="flex items-start">
-            <div className="flex items-center">
-              {getEstadoCivilIcon(cliente.estadoCivil)}
-              <div>
-                <p className="text-xs text-gray-500">Estado Civil</p>
-                <p className="text-gray-800">{cliente.estadoCivil}</p>
+          {cliente.estadoCivil && (
+            <div className="flex items-start">
+              <div className="flex items-center">
+                {getEstadoCivilIcon(cliente.estadoCivil)}
+                <div>
+                  <p className="text-xs text-gray-500">Estado Civil</p>
+                  <p className="text-gray-800">{cliente.estadoCivil}</p>
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
 
         <div className="mt-4">
