@@ -1,8 +1,10 @@
-import { render, screen } from '@testing-library/react';
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it } from 'vitest';
+import { cleanup, render, screen } from '@testing-library/react';
 import Layout from './Layout';
 
 describe('Layout', () => {
+  afterEach(cleanup);
+
   it('shows the logo from the project base path', () => {
     render(<Layout>content</Layout>);
     const logo = screen.getByAltText('Logo Banestes');
